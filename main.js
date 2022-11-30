@@ -9,9 +9,12 @@ let choices = ['rock', 'paper', 'scissor'];
 let machinePoints = 0;
 let userPoints = 0;
 
+const random = function(){
+    return Math.floor(Math.random() * 4);
+}
+
 rock.addEventListener('click', ()=> {
-    randomNum = Math.floor(Math.random() * 4);
-    machineGuess = choices[randomNum];
+    machineGuess = choices[random()];
 
     if (machineGuess == 'rock') {
         alert('Draw!');
@@ -30,8 +33,7 @@ rock.addEventListener('click', ()=> {
 })
 
 paper.addEventListener('click', ()=> {
-    randomNum = Math.floor(Math.random() * 4);
-    machineGuess = choices[randomNum];
+    machineGuess = choices[random()];
 
     if (machineGuess == 'paper') {
         alert('Draw!');
@@ -50,8 +52,7 @@ paper.addEventListener('click', ()=> {
 })
 
 scissor.addEventListener('click', ()=> {
-    randomNum = Math.floor(Math.random() * 4);
-    machineGuess = choices[randomNum];
+    machineGuess = choices[random()];
 
     if (machineGuess == 'scissor') {
         alert('Draw!');
